@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simpatico Roofing & Consulting — Grand Rapids, MI</title>
+<meta name="description" content="Residential and commercial roofing in Grand Rapids, MI. Honest estimates, expert installation, and a satisfaction guarantee. Book your free assessment today.">
+<link rel="stylesheet" href="styles.css">
+<style>
+/* ── HERO ── */
+.hero {
+  background: var(--navy);
+  padding: 96px 32px 88px;
+  text-align: center;
+  position: relative; overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 60% 0%, rgba(243,168,29,0.07) 0%, transparent 65%);
+  pointer-events: none;
+}
+.hero-eyebrow {
+  font-weight: 800; font-size: 12px; letter-spacing: 0.20em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 20px;
+}
+.hero h1 {
+  font-weight: 900; font-size: clamp(44px, 7vw, 88px);
+  text-transform: uppercase; letter-spacing: 0.03em; line-height: 0.92;
+  color: white; margin-bottom: 28px;
+}
+.hero h1 em { color: var(--gold); font-style: normal; }
+.hero-sub {
+  font-size: clamp(16px, 2vw, 20px); font-weight: 400;
+  color: rgba(255,255,255,0.68); line-height: 1.65;
+  max-width: 560px; margin: 0 auto 44px;
+}
+.hero-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+/* ── CARE SECTION ── */
+.care-section { background: var(--off-white); padding: 96px 32px; }
+.care-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 3px;
+  max-width: 1200px; margin: 0 auto;
+}
+.care-card {
+  background: white;
+  padding: 40px 32px 36px;
+  box-shadow: 0 2px 12px rgba(8,31,63,0.07);
+  transition: box-shadow 200ms ease-out, transform 200ms ease-out;
+}
+.care-card:hover {
+  box-shadow: 0 8px 32px rgba(8,31,63,0.14);
+  transform: translateY(-3px);
+}
+.care-letter {
+  font-weight: 900; font-size: 88px; line-height: 1;
+  letter-spacing: -0.02em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 4px;
+  text-shadow: 2px 2px 0 rgba(243,168,29,0.15);
+}
+.care-rule { width: 40px; height: 3px; background: var(--gold); margin-bottom: 18px; }
+.care-title {
+  font-weight: 900; font-size: 22px;
+  text-transform: uppercase; letter-spacing: 0.05em;
+  color: var(--navy); margin-bottom: 14px;
+}
+.care-desc { font-size: 15px; font-weight: 400; color: var(--gray); line-height: 1.70; }
+.care-desc strong { color: var(--navy); font-weight: 700; }
+
+/* ── REVIEWS ── */
+.reviews-section { background: var(--navy); padding: 88px 32px; }
+.reviews-section .section-header { margin-bottom: 52px; }
+.reviews-section .section-title { color: white; }
+.reviews-aggregate { display: flex; align-items: center; gap: 14px; justify-content: center; margin-top: 16px; flex-wrap: wrap; }
+.reviews-stars { color: var(--gold); font-size: 26px; letter-spacing: 3px; }
+.reviews-score { font-weight: 900; font-size: 26px; color: white; letter-spacing: 0.03em; }
+.reviews-count { font-weight: 400; font-size: 15px; color: rgba(255,255,255,0.55); letter-spacing: 0; }
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  max-width: 1200px; margin: 0 auto;
+}
+.review-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(243,168,29,0.18);
+  border-top: 3px solid var(--gold);
+  padding: 28px 24px 24px;
+  transition: background 200ms;
+}
+.review-card:hover { background: rgba(255,255,255,0.08); }
+.review-stars { color: var(--gold); font-size: 16px; letter-spacing: 2px; margin-bottom: 14px; }
+.review-text { font-size: 15px; font-weight: 400; font-style: italic; color: rgba(255,255,255,0.80); line-height: 1.70; margin-bottom: 20px; }
+.review-author { font-weight: 800; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: white; }
+.review-source { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-top: 3px; }
+
+/* ── HOW IT WORKS ── */
+.how-section { background: white; padding: 88px 32px; }
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2px;
+  max-width: 1100px; margin: 0 auto;
+}
+.step { padding: 32px 28px; border-top: 4px solid var(--gold); background: var(--off-white); }
+.step-num {
+  font-weight: 900; font-size: 48px; letter-spacing: 0.02em;
+  color: var(--gold); line-height: 1; margin-bottom: 12px; opacity: 0.70;
+}
+.step-title { font-weight: 800; font-size: 18px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--navy); margin-bottom: 10px; }
+.step-desc { font-size: 14px; font-weight: 400; color: var(--gray); line-height: 1.65; }
+
+/* ── FINAL CTA ── */
+.cta-section { background: var(--gold); padding: 80px 32px; text-align: center; }
+.cta-section h2 {
+  font-weight: 900; font-size: clamp(30px, 4vw, 56px);
+  text-transform: uppercase; letter-spacing: 0.03em; line-height: 1.0;
+  color: var(--navy); margin-bottom: 16px;
+}
+.cta-section p {
+  font-size: 18px; font-weight: 400;
+  color: var(--navy); opacity: 0.72; line-height: 1.6;
+  max-width: 520px; margin: 0 auto 36px;
+}
+
+@media (max-width: 680px) {
+  .hero { padding: 64px 20px 60px; }
+  .care-section, .how-section { padding: 64px 20px; }
+  .reviews-section { padding: 64px 20px; }
+  .cta-section { padding: 60px 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-left">
+    <a class="nav-brand" href="/">
+      <img src="assets/simpatico_circle_logo_navy_cropped.png" alt="Simpatico Roofing">
+      <div class="nav-brand-text">
+        <span class="nav-brand-name">Simpatico</span>
+        <span class="nav-brand-sub">Roofing & Consulting</span>
+      </div>
+    </a>
+    <nav class="nav-links">
+      <a href="financing.html">Financing</a>
+      <a href="products-we-trust.html">Products We Trust</a>
+    </nav>
+  </div>
+  <a class="nav-cta" href="https://book.simpaticoroofing.com">Book Free Assessment</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-eyebrow">Residential &amp; Commercial Roofing · Grand Rapids, MI</div>
+  <h1>Every Person Is<br>Worthy of<br><em>Care.</em></h1>
+  <p class="hero-sub">A roof is more than materials and nails — it is protection, comfort, and security. When it is built and cared for the right way, it safeguards the people and moments that matter most.</p>
+  <div class="hero-actions">
+    <a class="btn-primary" href="https://book.simpaticoroofing.com">Book a Free Assessment</a>
+    <a class="btn-ghost" href="#care">How We Work</a>
+  </div>
+</section>
+
+<!-- CARE SECTION -->
+<section class="care-section" id="care">
+  <div class="section-header">
+    <div class="section-eyebrow">The Simpatico Difference</div>
+    <div class="section-title">We C.A.R.E.</div>
+    <p class="section-sub">Four commitments we make to every customer, on every job. No exceptions.</p>
+  </div>
+  <div class="care-grid">
+
+    <div class="care-card">
+      <div class="care-letter">C</div>
+      <div class="care-rule"></div>
+      <div class="care-title">Communication</div>
+      <p class="care-desc"><strong>Clear and consistent. Beginning to end.</strong> No surprises. No chasing us down for updates. You'll always know exactly where things stand — because easy communication isn't a bonus, it's the baseline.</p>
+    </div>
+
+    <div class="care-card">
+      <div class="care-letter">A</div>
+      <div class="care-rule"></div>
+      <div class="care-title">Attention</div>
+      <p class="care-desc"><strong>We pay careful attention to every detail — and to you.</strong> Not just the job. Your home matters. Your time matters. We show up like we mean it, because we do.</p>
+    </div>
+
+    <div class="care-card">
+      <div class="care-letter">R</div>
+      <div class="care-rule"></div>
+      <div class="care-title">Reliable</div>
+      <p class="care-desc"><strong>Everything as promised. On time. On budget.</strong> No excuses. We say what we'll do, and we do what we say. Your trust is our most valuable material.</p>
+    </div>
+
+    <div class="care-card">
+      <div class="care-letter">E</div>
+      <div class="care-rule"></div>
+      <div class="care-title">Expectation</div>
+      <p class="care-desc"><strong>You don't pay until you tell us we've exceeded your expectations.</strong> That's not a guarantee we offer lightly — it's the standard we hold ourselves to on every single project.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- REVIEWS SECTION -->
+<section class="reviews-section">
+  <div class="section-header">
+    <div class="section-eyebrow">Google Reviews</div>
+    <div class="section-title">What Grand Rapids<br>Is Saying</div>
+    <div class="reviews-aggregate">
+      <div class="reviews-stars">★★★★★</div>
+      <div class="reviews-score">5.0 <span class="reviews-count">· 73 reviews on Google</span></div>
+    </div>
+  </div>
+  <div class="reviews-grid">
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"From the first communication, to the final email, they were very professional and honest. The crew took extra time to communicate the plan day of, and cleaned up great!"</p>
+      <div class="review-author">Brian Frawley</div>
+      <div class="review-source">Grand Rapids, MI · Google Review</div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Dan and Jake were super responsive, courteous, friendly and willing to help with a difficult project. Very knowledgeable — and went the extra mile when they did not need to!"</p>
+      <div class="review-author">Mara DeBoer</div>
+      <div class="review-source">Grand Rapids, MI · Google Review</div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"James and TC came to repair a roof leak. They took the time to tell me exactly why my roof was leaking, showed me pictures, and explained everything. Awesome service."</p>
+      <div class="review-author">Luciano Rodriguez</div>
+      <div class="review-source">Grand Rapids, MI · Google Review</div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"I needed a couple of repairs to my roof. Dan came out, reviewed, advised what was needed and fixed it that day. Great work and fair price. Easy and no hassles!"</p>
+      <div class="review-author">Peter Cavanaugh</div>
+      <div class="review-source">Grand Rapids, MI · Google Review</div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Nate is very professional, knowledgeable and responsive. Easy to work with. I would highly recommend."</p>
+      <div class="review-author">L. Glazer</div>
+      <div class="review-source">Grand Rapids, MI · Google Review</div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Did a very thorough job. Checked everything on my roof. Very professional, prompt and affordable."</p>
+      <div class="review-author">Kathleen McFarlane</div>
+      <div class="review-source">Grand Rapids, MI · Google Review</div>
+    </div>
+
+  </div>
+  <div style="text-align:center; margin-top:40px;">
+    <a class="btn-primary" href="https://www.google.com/search?q=Simpatico+Roofing+Consulting+Grand+Rapids+MI" target="_blank" rel="noopener">Read All Reviews on Google</a>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-section">
+  <div class="section-header" style="margin-bottom:52px;">
+    <div class="section-eyebrow">Simple Process</div>
+    <div class="section-title">How It Works</div>
+  </div>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">01</div>
+      <div class="step-title">Book Your Free Assessment</div>
+      <p class="step-desc">Schedule online or call us directly. We'll come to you — no obligation, no pressure.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">02</div>
+      <div class="step-title">Get a Clear, Written Estimate</div>
+      <p class="step-desc">We walk you through exactly what needs to be done and what it costs. Plain language. No hidden fees.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">03</div>
+      <div class="step-title">We Handle Everything</div>
+      <p class="step-desc">From permits to cleanup, we manage the full job — keeping you informed every step of the way.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">04</div>
+      <div class="step-title">You Approve. Then You Pay.</div>
+      <p class="step-desc">You don't pay until you're satisfied. That's the Simpatico standard — and we never lower it.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="cta-section" id="assessment">
+  <h2>Ready to Get Started?</h2>
+  <p>Book your free roof assessment today. We'll be in touch within one business day — no pressure, just honest answers.</p>
+  <a class="btn-navy" href="https://book.simpaticoroofing.com">Book a Free Assessment</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="assets/simpatico_circle_logo_navy_cropped.png" alt="Simpatico Roofing">
+      <div class="footer-brand-name">Simpatico</div>
+      <div class="footer-brand-sub">Roofing &amp; Consulting</div>
+      <p>Built to last. Backed by experts. Serving residential and commercial clients in the Grand Rapids area.</p>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Pages</div>
+      <a href="/">Home</a>
+      <a href="financing.html">Financing</a>
+      <a href="products-we-trust.html">Products We Trust</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Services</div>
+      <a href="https://book.simpaticoroofing.com">Roof Inspection</a>
+      <a href="https://book.simpaticoroofing.com">Roof Replacement</a>
+      <a href="https://book.simpaticoroofing.com">Storm Damage</a>
+      <a href="https://book.simpaticoroofing.com">Consulting</a>
+      <a href="https://book.simpaticoroofing.com">Gutters</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Contact</div>
+      <div>616.287.4001</div>
+      <div>info@simpaticoroofing.com</div>
+      <div>Mon–Fri: 8am–4pm</div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">&copy; 2026 Simpatico Roofing &amp; Consulting. All Rights Reserved.</div>
+    <div class="footer-copy">Licensed &middot; Bonded &middot; Insured</div>
+  </div>
+</footer>
+
+</body>
+</html>
