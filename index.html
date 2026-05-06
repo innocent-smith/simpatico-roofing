@@ -126,11 +126,41 @@
   max-width: 520px; margin: 0 auto 36px;
 }
 
+/* ── WHAT WE DO ── */
+.services-section { background: var(--navy); padding: 88px 32px; }
+.services-intro {
+  font-size: clamp(16px, 2vw, 18px); font-weight: 400;
+  color: rgba(255,255,255,0.65); line-height: 1.70;
+  max-width: 620px; margin: 0 auto 52px; text-align: center;
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 0;
+  max-width: 900px; margin: 0 auto;
+}
+.service-item {
+  display: flex; gap: 20px; align-items: flex-start;
+  padding: 28px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.service-num {
+  font-weight: 900; font-size: 28px; letter-spacing: 0.02em;
+  color: var(--gold); line-height: 1; flex-shrink: 0; min-width: 40px;
+}
+.service-title {
+  font-weight: 800; font-size: 17px; text-transform: uppercase;
+  letter-spacing: 0.06em; color: white; margin-bottom: 6px;
+}
+.service-desc { font-size: 14px; font-weight: 400; color: rgba(255,255,255,0.55); line-height: 1.60; }
+
 @media (max-width: 680px) {
   .hero { padding: 64px 20px 60px; }
   .care-section, .how-section { padding: 64px 20px; }
   .reviews-section { padding: 64px 20px; }
   .cta-section { padding: 60px 20px; }
+  .services-section { padding: 64px 20px; }
+  .services-grid { grid-template-columns: 1fr; }
 }
 </style>
 </head>
@@ -305,6 +335,59 @@
       <div class="step-num">04</div>
       <div class="step-title">You Approve. Then You Pay.</div>
       <p class="step-desc">You don't pay until you're satisfied. That's the Simpatico standard — and we never lower it.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE DO -->
+<section class="services-section">
+  <div class="section-header">
+    <div class="section-eyebrow">Full Service Roofing</div>
+    <div class="section-title">What We Do.</div>
+  </div>
+  <p class="services-intro">Residential and commercial roofing — every job handled with the same honest care, from a small repair to a full replacement.</p>
+  <div class="services-grid">
+    <div class="service-item">
+      <div class="service-num">01</div>
+      <div>
+        <div class="service-title">Roof Replacement</div>
+        <p class="service-desc">Full tear-off and install with premium materials.</p>
+      </div>
+    </div>
+    <div class="service-item">
+      <div class="service-num">02</div>
+      <div>
+        <div class="service-title">Shingle Repairs &amp; Maintenance</div>
+        <p class="service-desc">From small leaks to full restoration.</p>
+      </div>
+    </div>
+    <div class="service-item">
+      <div class="service-num">03</div>
+      <div>
+        <div class="service-title">Flat Roof Repair &amp; Maintenance</div>
+        <p class="service-desc">Specialized care for low-slope and commercial systems.</p>
+      </div>
+    </div>
+    <div class="service-item">
+      <div class="service-num">04</div>
+      <div>
+        <div class="service-title">Ventilation Installation</div>
+        <p class="service-desc">Proper airflow to extend roof life and lower energy costs.</p>
+      </div>
+    </div>
+    <div class="service-item">
+      <div class="service-num">05</div>
+      <div>
+        <div class="service-title">Gutters &amp; Flashing</div>
+        <p class="service-desc">Complete water management for your home.</p>
+      </div>
+    </div>
+    <div class="service-item">
+      <div class="service-num">06</div>
+      <div>
+        <div class="service-title">Roofing Consulting</div>
+        <p class="service-desc">Expert guidance for builders and property managers.</p>
+      </div>
     </div>
   </div>
 </section>
