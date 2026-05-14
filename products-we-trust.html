@@ -3,8 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Products We Trust — Simpatico Roofing & Consulting</title>
-<meta name="description" content="The roofing products Simpatico installs on every job — Atlas shingles, Air Vent ventilation, and Robert's roof caps. Chosen for durability, performance, and long-term protection.">
+<title>Roofing Products We Trust | Simpatico Roofing Grand Rapids</title>
+<meta name="description" content="Atlas shingles with 3M Scotchgard, Air Vent ventilation, and Robert's Roof Caps. The products Simpatico installs on every job in Grand Rapids, MI.">
+<link rel="canonical" href="https://simpaticoroofing.com/products-we-trust">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Simpatico Roofing & Consulting">
+<meta property="og:title" content="Roofing Products We Trust | Simpatico Roofing">
+<meta property="og:description" content="Atlas shingles, Air Vent ventilation, and Robert's Roof Caps. The brands behind every install.">
+<meta property="og:url" content="https://simpaticoroofing.com/products-we-trust">
+<meta property="og:image" content="https://simpaticoroofing.com/assets/og-image.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Roofing Products We Trust">
+<meta name="twitter:description" content="The brands behind every install at Simpatico Roofing.">
+<meta name="twitter:image" content="https://simpaticoroofing.com/assets/og-image.jpg">
+
 <link rel="stylesheet" href="styles.css">
 <style>
 .page-hero {
@@ -120,6 +136,21 @@
   .products-cta { padding: 60px 20px; }
 }
 </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Roofing Products We Trust",
+  "url": "https://simpaticoroofing.com/products-we-trust",
+  "about": {"@id": "https://simpaticoroofing.com/#business"},
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Simpatico Roofing & Consulting",
+    "url": "https://simpaticoroofing.com/"
+  }
+}
+</script>
 </head>
 <body>
 
@@ -216,10 +247,11 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <div class="footer-copy">&copy; 2026 Simpatico Roofing &amp; Consulting. All Rights Reserved.</div>
+    <div class="footer-copy">&copy; <span id="copyright-year">2026</span> Simpatico Roofing &amp; Consulting. All Rights Reserved.</div>
     <div class="footer-copy">Licensed &middot; Bonded &middot; Insured</div>
   </div>
 </footer>
+<script>document.getElementById('copyright-year').textContent = new Date().getFullYear();</script>
 
 </body>
 </html>
