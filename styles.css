@@ -156,3 +156,51 @@ footer {
   .nav-cta-group a { text-align: center; }
   .footer-inner { gap: 28px; }
 }
+
+/* ── FAQ SECTION ── */
+.faq-section {
+  max-width: 720px;
+  margin: 4rem auto;
+  padding: 0 1.5rem;
+}
+.faq-section .eyebrow {
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+  text-align: center;
+}
+.faq-section h2 {
+  font-weight: 900;
+  font-size: clamp(32px, 4vw, 44px);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--navy);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.faq-section details {
+  border-bottom: 1px solid var(--cream);
+  padding: 1rem 0;
+}
+.faq-section summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--navy);
+  list-style: none;
+}
+.faq-section summary::-webkit-details-marker { display: none; }
+.faq-section summary::after {
+  content: "+";
+  float: right;
+  font-size: 1.25rem;
+  color: var(--gold);
+}
+.faq-section details[open] summary::after { content: "−"; }
+.faq-section details p {
+  margin-top: 0.75rem;
+  color: var(--gray);
+  line-height: 1.6;
+}
