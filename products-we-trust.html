@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products We Trust — Simpatico Roofing & Consulting</title>
+<meta name="description" content="The roofing products Simpatico installs on every job — Atlas shingles, Air Vent ventilation, and Robert's roof caps. Chosen for durability, performance, and long-term protection.">
+<link rel="stylesheet" href="styles.css">
+<style>
+.page-hero {
+  background: var(--navy);
+  padding: 80px 32px 72px;
+  text-align: center;
+  position: relative; overflow: hidden;
+}
+.page-hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 60% 0%, rgba(243,168,29,0.07) 0%, transparent 65%);
+  pointer-events: none;
+}
+.page-hero-eyebrow {
+  font-weight: 800; font-size: 12px; letter-spacing: 0.20em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 20px;
+}
+.page-hero h1 {
+  font-weight: 900; font-size: clamp(40px, 6vw, 72px);
+  text-transform: uppercase; letter-spacing: 0.03em; line-height: 0.95;
+  color: white; margin-bottom: 24px;
+}
+.page-hero p {
+  font-size: clamp(16px, 2vw, 19px); font-weight: 400;
+  color: rgba(255,255,255,0.65); line-height: 1.65;
+  max-width: 640px; margin: 0 auto;
+}
+
+/* ── PRODUCTS ── */
+.products {
+  background: var(--off-white);
+  padding: 88px 32px;
+}
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 28px;
+  max-width: 1200px; margin: 0 auto;
+}
+.product-card {
+  background: white;
+  border-top: 4px solid var(--gold);
+  padding: 40px 32px 36px;
+  display: flex; flex-direction: column;
+  box-shadow: 0 2px 12px rgba(8,31,63,0.07);
+  transition: box-shadow 200ms ease-out, transform 200ms ease-out;
+}
+.product-card:hover {
+  box-shadow: 0 8px 32px rgba(8,31,63,0.14);
+  transform: translateY(-3px);
+}
+.product-eyebrow {
+  font-weight: 800; font-size: 11px; letter-spacing: 0.20em;
+  text-transform: uppercase; color: var(--gold-dark);
+  margin-bottom: 12px;
+}
+.product-name {
+  font-weight: 900; font-size: 26px; text-transform: uppercase;
+  letter-spacing: 0.04em; color: var(--navy); margin-bottom: 18px;
+  line-height: 1.1;
+}
+.product-quote {
+  font-size: 16px; font-weight: 500; font-style: italic;
+  color: var(--navy); line-height: 1.60;
+  margin-bottom: 18px;
+  padding-left: 16px;
+  border-left: 3px solid var(--gold);
+}
+.product-desc {
+  font-size: 15px; font-weight: 400; color: var(--gray);
+  line-height: 1.70;
+}
+
+/* ── CLOSING CTA ── */
+.products-cta {
+  background: white;
+  padding: 80px 32px;
+  text-align: center;
+}
+.products-cta-box {
+  max-width: 640px; margin: 0 auto;
+  background: var(--off-white);
+  border-top: 4px solid var(--gold);
+  padding: 48px 40px;
+}
+.products-cta-box h2 {
+  font-weight: 900; font-size: 28px; text-transform: uppercase;
+  letter-spacing: 0.05em; color: var(--navy); margin-bottom: 16px;
+}
+.products-cta-box p {
+  font-size: 16px; color: var(--gray); line-height: 1.70; margin-bottom: 32px;
+}
+
+@media (max-width: 680px) {
+  .page-hero { padding: 60px 20px 56px; }
+  .products { padding: 60px 20px; }
+  .products-cta { padding: 60px 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-brand" href="/">
+    <img src="assets/simpatico_circle_logo_navy_cropped.png" alt="Simpatico Roofing">
+    <div class="nav-brand-text">
+      <span class="nav-brand-name">Simpatico</span>
+      <span class="nav-brand-sub">Roofing & Consulting</span>
+    </div>
+  </a>
+  <div class="nav-cta-group">
+    <a class="nav-cta-secondary" href="financing.html">Financing</a>
+    <a class="nav-cta-secondary" href="products-we-trust.html" aria-current="page">Products We Trust</a>
+    <a class="nav-cta" href="https://book.simpaticoroofing.com">Book Free Assessment</a>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-eyebrow">Built To Last</div>
+  <h1>Products We Trust</h1>
+  <p>Every roof we install is only as good as the materials underneath it. These are the brands we've chosen — and stuck with — because they hold up where it matters most.</p>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products">
+  <div class="section-header">
+    <div class="section-eyebrow">What's On Your Roof</div>
+    <div class="section-title">The Brands Behind Every Install.</div>
+    <p class="section-sub">We don't change brands chasing the lowest price. These are the products our crews install on every job because they perform — year after year, season after season.</p>
+  </div>
+
+  <div class="products-grid">
+
+    <div class="product-card">
+      <div class="product-eyebrow">Shingles</div>
+      <div class="product-name">Atlas Shingles</div>
+      <p class="product-quote">"We choose to install Atlas Shingles because they are the only brand backed by 3M Scotchgard™ to guarantee your roof never develops ugly black streaks."</p>
+      <p class="product-desc">Selected for high-wind technology and long-term curb appeal — a durable roof that still looks new years after install.</p>
+    </div>
+
+    <div class="product-card">
+      <div class="product-eyebrow">Ventilation</div>
+      <div class="product-name">Air Vent</div>
+      <p class="product-quote">"We trust Air Vent because they engineer a complete intake-and-exhaust system that protects your attic from mold, ice dams, and soaring energy bills."</p>
+      <p class="product-desc">Used on every installation to maintain proper airflow — keeping the attic healthy, the insulation dry, and energy costs in check.</p>
+    </div>
+
+    <div class="product-card">
+      <div class="product-eyebrow">Roof Caps</div>
+      <div class="product-name">Robert's Roof Caps</div>
+      <p class="product-quote">"Our team relies on Robert's Roof Caps because their patented hose-clamp system guarantees the ductwork inside your attic never disconnects."</p>
+      <p class="product-desc">Chosen to prevent the moisture buildup and mold problems that come with lower-quality vent cap alternatives.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CLOSING CTA -->
+<section class="products-cta">
+  <div class="products-cta-box">
+    <h2>Questions About What We Install?</h2>
+    <p>We're happy to walk you through every product on your roof — what it does, why we chose it, and how it protects your home. Book a free assessment and we'll show you in person.</p>
+    <a class="btn-primary" href="https://book.simpaticoroofing.com">Book a Free Assessment</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="assets/simpatico_circle_logo_navy_cropped.png" alt="Simpatico Roofing">
+      <div class="footer-brand-name">Simpatico</div>
+      <div class="footer-brand-sub">Roofing &amp; Consulting</div>
+      <p>Built to last. Backed by experts. Serving residential and commercial clients in the Grand Rapids area.</p>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Contact</div>
+      <div>616.287.4001</div>
+      <div>info@simpaticoroofing.com</div>
+      <div>3113 Hillcroft Ave SW, Grand Rapids, MI 49548</div>
+      <div>Mon–Fri: 8am–4pm</div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">&copy; 2026 Simpatico Roofing &amp; Consulting. All Rights Reserved.</div>
+    <div class="footer-copy">Licensed &middot; Bonded &middot; Insured</div>
+  </div>
+</footer>
+
+</body>
+</html>
