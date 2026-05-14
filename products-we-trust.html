@@ -53,7 +53,9 @@
   box-shadow: 0 2px 12px rgba(8,31,63,0.07);
   transition: box-shadow 200ms ease-out, transform 200ms ease-out;
   overflow: hidden;
+  text-decoration: none; color: inherit;
 }
+.product-card:hover .product-name { color: var(--gold-dark); }
 .product-card:hover {
   box-shadow: 0 8px 32px rgba(8,31,63,0.14);
   transform: translateY(-3px);
@@ -154,7 +156,7 @@
 
   <div class="products-grid">
 
-    <div class="product-card">
+    <a class="product-card" href="https://www.atlasroofing.com/choose-your-shingles" target="_blank" rel="noopener">
       <div class="product-image"><img src="assets/atlas.webp" alt="Atlas shingles with 3M Scotchgard"></div>
       <div class="product-body">
         <div class="product-eyebrow">Shingles</div>
@@ -162,9 +164,9 @@
         <p class="product-quote">"We choose to install Atlas Shingles because they are the only brand backed by 3M Scotchgard™ to guarantee your roof never develops ugly black streaks."</p>
         <p class="product-desc">Selected for high-wind technology and long-term curb appeal — a durable roof that still looks new years after install.</p>
       </div>
-    </div>
+    </a>
 
-    <div class="product-card">
+    <a class="product-card" href="https://gibraltarbuildingproducts.com/ventilation-category/" target="_blank" rel="noopener">
       <div class="product-image"><img src="assets/airvent.jpg" alt="Air Vent — We Know Air Flow"></div>
       <div class="product-body">
         <div class="product-eyebrow">Ventilation</div>
@@ -172,9 +174,9 @@
         <p class="product-quote">"We trust Air Vent because they engineer a complete intake-and-exhaust system that protects your attic from mold, ice dams, and soaring energy bills."</p>
         <p class="product-desc">Used on every installation to maintain proper airflow — keeping the attic healthy, the insulation dry, and energy costs in check.</p>
       </div>
-    </div>
+    </a>
 
-    <div class="product-card">
+    <a class="product-card" href="https://www.robertsroofcap.com/" target="_blank" rel="noopener">
       <div class="product-image"><img src="assets/roberts.webp" alt="Robert's Roof Cap"></div>
       <div class="product-body">
         <div class="product-eyebrow">Roof Caps</div>
@@ -182,7 +184,7 @@
         <p class="product-quote">"Our team relies on Robert's Roof Caps because their patented hose-clamp system guarantees the ductwork inside your attic never disconnects."</p>
         <p class="product-desc">Chosen to prevent the moisture buildup and mold problems that come with lower-quality vent cap alternatives.</p>
       </div>
-    </div>
+    </a>
 
   </div>
 </section>
