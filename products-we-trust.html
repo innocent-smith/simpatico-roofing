@@ -48,15 +48,28 @@
 .product-card {
   background: white;
   border-top: 4px solid var(--gold);
-  padding: 40px 32px 36px;
+  padding: 0 0 36px;
   display: flex; flex-direction: column;
   box-shadow: 0 2px 12px rgba(8,31,63,0.07);
   transition: box-shadow 200ms ease-out, transform 200ms ease-out;
+  overflow: hidden;
 }
 .product-card:hover {
   box-shadow: 0 8px 32px rgba(8,31,63,0.14);
   transform: translateY(-3px);
 }
+.product-image {
+  height: 220px;
+  background: var(--off-white);
+  display: flex; align-items: center; justify-content: center;
+  padding: 24px;
+  margin-bottom: 32px;
+}
+.product-image img {
+  max-height: 100%; max-width: 100%;
+  width: auto; object-fit: contain;
+}
+.product-body { padding: 0 32px; display: flex; flex-direction: column; }
 .product-eyebrow {
   font-weight: 800; font-size: 11px; letter-spacing: 0.20em;
   text-transform: uppercase; color: var(--gold-dark);
@@ -142,24 +155,33 @@
   <div class="products-grid">
 
     <div class="product-card">
-      <div class="product-eyebrow">Shingles</div>
-      <div class="product-name">Atlas Shingles</div>
-      <p class="product-quote">"We choose to install Atlas Shingles because they are the only brand backed by 3M Scotchgard™ to guarantee your roof never develops ugly black streaks."</p>
-      <p class="product-desc">Selected for high-wind technology and long-term curb appeal — a durable roof that still looks new years after install.</p>
+      <div class="product-image"><img src="assets/atlas.webp" alt="Atlas shingles with 3M Scotchgard"></div>
+      <div class="product-body">
+        <div class="product-eyebrow">Shingles</div>
+        <div class="product-name">Atlas Shingles</div>
+        <p class="product-quote">"We choose to install Atlas Shingles because they are the only brand backed by 3M Scotchgard™ to guarantee your roof never develops ugly black streaks."</p>
+        <p class="product-desc">Selected for high-wind technology and long-term curb appeal — a durable roof that still looks new years after install.</p>
+      </div>
     </div>
 
     <div class="product-card">
-      <div class="product-eyebrow">Ventilation</div>
-      <div class="product-name">Air Vent</div>
-      <p class="product-quote">"We trust Air Vent because they engineer a complete intake-and-exhaust system that protects your attic from mold, ice dams, and soaring energy bills."</p>
-      <p class="product-desc">Used on every installation to maintain proper airflow — keeping the attic healthy, the insulation dry, and energy costs in check.</p>
+      <div class="product-image"><img src="assets/airvent.jpg" alt="Air Vent — We Know Air Flow"></div>
+      <div class="product-body">
+        <div class="product-eyebrow">Ventilation</div>
+        <div class="product-name">Air Vent</div>
+        <p class="product-quote">"We trust Air Vent because they engineer a complete intake-and-exhaust system that protects your attic from mold, ice dams, and soaring energy bills."</p>
+        <p class="product-desc">Used on every installation to maintain proper airflow — keeping the attic healthy, the insulation dry, and energy costs in check.</p>
+      </div>
     </div>
 
     <div class="product-card">
-      <div class="product-eyebrow">Roof Caps</div>
-      <div class="product-name">Robert's Roof Caps</div>
-      <p class="product-quote">"Our team relies on Robert's Roof Caps because their patented hose-clamp system guarantees the ductwork inside your attic never disconnects."</p>
-      <p class="product-desc">Chosen to prevent the moisture buildup and mold problems that come with lower-quality vent cap alternatives.</p>
+      <div class="product-image"><img src="assets/roberts.webp" alt="Robert's Roof Cap"></div>
+      <div class="product-body">
+        <div class="product-eyebrow">Roof Caps</div>
+        <div class="product-name">Robert's Roof Caps</div>
+        <p class="product-quote">"Our team relies on Robert's Roof Caps because their patented hose-clamp system guarantees the ductwork inside your attic never disconnects."</p>
+        <p class="product-desc">Chosen to prevent the moisture buildup and mold problems that come with lower-quality vent cap alternatives.</p>
+      </div>
     </div>
 
   </div>
